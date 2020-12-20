@@ -9,3 +9,4 @@ requests
 pytest
 password_strength
 python-dotenv
+werkzeug==0.16.0

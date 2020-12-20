@@ -94,13 +94,8 @@ def after_request(response):
 ###############################
 # Import blueprints
 ###############################
+from blueprints.Skripsi.resources import bp_skripsi
 
-from blueprints.Auth import bp_auth
-from blueprints.Client.resources import bp_client
-from blueprints.Pets.resources import bp_pets
-
-app.register_blueprint(bp_auth, url_prefix='/login')
-app.register_blueprint(bp_client, url_prefix='/client' )
-app.register_blueprint(bp_pets, url_prefix='/pets' )
+app.register_blueprint(bp_skripsi, url_prefix='/skripsi' )
 
 db.create_all()
