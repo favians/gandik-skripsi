@@ -17,6 +17,7 @@ from functools import wraps
 import os
 from dotenv import load_dotenv
 load_dotenv()
+from flask_cors import CORS
 
 # OR, explicitly providing path to '.env'
 from pathlib import Path  # python3 only
@@ -26,6 +27,7 @@ load_dotenv(dotenv_path=env_path)
 
 app = Flask(__name__)
 app.config['APP_DEBUG'] = True
+CORS(app)
 
 #################
 # JWT
